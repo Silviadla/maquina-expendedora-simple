@@ -29,7 +29,7 @@ public class MaquinaExpendedoraSimple {
      * precio del billete y el origen y destino dados. Se asume que el precio
      * del billete que se recibe es mayor que 0.
      */
-    public MaquinaExpendedoraSimple (int preciodelBillete, String destino) {
+    public MaquinaExpendedoraSimple(int preciodelBillete, String destino) {
         precioBillete = preciodelBillete;
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
@@ -47,10 +47,15 @@ public class MaquinaExpendedoraSimple {
     /**
      * Permite cambiar el precio del billete al valor introducido como parámetro
      */
-    public void setPrecioBillete (int precioDelBillete) {
+    public void setPrecioBillete(int precioDelBillete) {
         precioBillete = precioDelBillete;
     }  
-    
+    /**
+     * Permite reducir el valor del precio en una cantidad pasada como parámetro 
+     */
+    public void reducirPrecioBillete(int reduccion) {
+        precioBillete -= reduccion;
+    }    
     /**
      * Devuelva el total de dinero acumulado
      */
